@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      onkeydown="if (event.key === 'Enter') fun()"
+    />
+    <button onclick="fun()">ENTER</button>
+    <div>
+      <div>
+        <div>
+          <img src="" alt="" id="user_photo" />
+        </div>
+        <div>
+          <p id="user_name"></p>
+          <p id="user_bio"></p>
+          <p>Location: <span id="user_location"></span></p>
+          <p>Twitter: <span id="user_twitter"></span></p>
+        </div>
+        <p id="user_url"></p>
+        Pages Limit:
+        <input
+          type="number"
+          id="page_limit"
+          name="page_limit"
+          min="10"
+          max="100"
+          value="10"
+          onkeydown="if (event.key === 'Enter') Page_size()"
+        />
+        <button onclick="Page_size()">SET</button>
+      </div>
+    </div>
+    <div id="repo"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
